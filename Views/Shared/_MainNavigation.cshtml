@@ -1,4 +1,5 @@
-﻿<aside class="main-sidebar sidebar-dark-primary elevation-4">
+﻿@using AdminLTE3.Services
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
         <img src="~/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -35,13 +36,13 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a asp-action="Index" asp-controller="Home" class="nav-link">
+                    <a asp-action="Index" asp-controller="Home" class="nav-link @Url.MakeActiveClass("home", "index")">
                         <i class="nav-icon fas fa-home"></i>
                         <p>Home</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a asp-action="Privacy" asp-controller="Home" class="nav-link">
+                    <a asp-action="Privacy" asp-controller="Home" class="nav-link @Url.MakeActiveClass("home", "privacy")">
                         <i class="nav-icon fas fa-lock"></i>
                         <p>Privacy</p>
                     </a>
